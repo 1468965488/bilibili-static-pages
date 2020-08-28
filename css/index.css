@@ -1,0 +1,201 @@
+html {
+  font-size: 9.25925925925926vw;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  position: relative;
+  font-family: PingFangSC-Regular;
+}
+#app .content {
+  display: fixed;
+}
+#app .content .profile #top-nav {
+  position: relative;
+  width: 100%;
+  height: 8.1rem;
+  background-color: #fa7298;
+}
+#app .content .profile #top-nav .top {
+  width: 100%;
+  display: block;
+}
+#app .content .profile #top-nav .lg-color {
+  height: 1.4rem;
+  color: #fff;
+}
+#app .content .profile #top-nav .lg-color .right {
+  float: right;
+  padding-top: 0.3rem;
+  padding-right: 0.3rem;
+}
+#app .content .profile #top-nav .lg-color .right i {
+  font-size: 0.6rem;
+  padding-left: 0.65rem;
+  display: block;
+  float: left;
+}
+#app .content .profile #top-nav .info {
+  height: 2.5rem;
+  width: 100%;
+}
+#app .content .profile #top-nav .info .avatar {
+  width: 2.75rem;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+#app .content .profile #top-nav .info .avatar .border {
+  margin-left: 0.28rem;
+  display: block;
+  width: 2.43rem;
+  float: left;
+  position: absolute;
+  z-index: 11;
+}
+#app .content .profile #top-nav .info .avatar .border img {
+  width: 100%;
+}
+#app .content .profile #top-nav .info .avatar .item {
+  position: absolute;
+  margin-left: 0.7rem;
+  margin-top: 0.48rem;
+}
+#app .content .profile #top-nav .info .avatar .item img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+#app .content .profile #top-nav .info .mid {
+  margin-top: 0.2rem;
+  float: left;
+}
+#app .content .profile #top-nav .info .mid .name {
+  margin: 0.2rem 0;
+  color: #fff;
+  font-size: 0.47rem;
+}
+#app .content .profile #top-nav .info .mid .name img {
+  display: inline;
+  width: 0.65rem;
+}
+#app .content .profile #top-nav .info .mid .vip {
+  height: 0.48rem;
+  width: 1.75rem;
+  background-color: #fff;
+  color: #fa7298;
+  line-height: 0.48rem;
+  font-size: 0.2rem;
+  text-align: center;
+  border-radius: 0.08rem;
+}
+#app .content .profile #top-nav .info .mid .coin {
+  margin-top: 0.25rem;
+  color: #fff;
+  font-size: 0.35rem;
+}
+#app .content .profile #top-nav .info .mid .coin .b {
+  margin-right: 0.35rem;
+}
+#app .content .profile #top-nav .info .mid .coin span {
+  display: block;
+  float: left;
+}
+#app .content .profile #top-nav .info .space {
+  float: right;
+  color: #fff;
+  font-size: 0.35rem;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+#app .content .profile #top-nav .info .space i {
+  padding-left: 0.15rem;
+  font-size: 0.4rem;
+}
+#app .content .profile #top-nav .friend {
+  width: 100%;
+  height: 1.85rem;
+}
+#app .content .profile #top-nav .friend div {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 33%;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+#app .content .profile #top-nav .friend div .num {
+  margin-bottom: 0.23rem;
+  font-size: 0.43rem;
+}
+#app .content .profile #top-nav .friend div .text {
+  font-size: 0.34rem;
+}
+#app .content .profile #top-nav .friend .line {
+  height: 0.6rem;
+  float: left;
+  margin-top: 0.62rem;
+  border-left: 1px solid #fff;
+}
+#app .content .profile #top-nav .vip-msg {
+  height: 1.55rem;
+  background-color: rgba(0,0,0,0.28);
+  width: 1000;
+  margin: 0 0.4rem;
+  border-top-left-radius: 0.15rem;
+  border-top-right-radius: 0.15rem;
+  padding-left: 0.35rem;
+  color: #fff;
+}
+#app .content .profile #top-nav .vip-msg .left {
+  float: left;
+}
+#app .content .profile #top-nav .vip-msg .left .vip {
+  margin-top: 0.35rem;
+display
+  width: 4rem;
+  font-size: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+#app .content .profile #top-nav .vip-msg .left .date {
+  width: 4rem;
+  font-size: 0.32rem;
+}
+#app .content .profile #top-nav .vip-msg i {
+  float: right;
+  display: block;
+  font-size: 0.4rem;
+  margin-top: 0.65rem;
+  margin-right: 0.5rem;
+}
+#app #footer-guide {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1.45rem;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+#app #footer-guide div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #a8a8a8;
+}
+#app #footer-guide div .text {
+  font-size: 0.42rem;
+}
+#app #footer-guide div .cha {
+  font-size: 0.57rem;
+}
+#app #footer-guide div .icon {
+  font-size: 0.75rem;
+}
