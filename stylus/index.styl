@@ -3,151 +3,298 @@ pr(designpx )
 
 html
   font-size (100vw/1080*100)
+
 #app
   width 100%
   height 100%
-  background #f5f5f5
+  //background #f5f5f5
   position relative
   font-family PingFangSC-Regular
   .content
-    display fixed
-    .profile   // 我的界面
-      #top-nav
-        position relative
-        width 100%
-        height 8.1rem
-        background-color #fa7298
-        .top
+    >div //决定哪个页面显示
+      display none
+      &.on
+        display block
+      .profile   // 我的界面
+        #top-nav
+          position fixed
+          left 0
+          top 0
+          right 0
           width 100%
-          display block
-        .lg-color
-          height 1.4rem
-          color white
-          .right
-            float right
-            padding-top 0.3rem
-            padding-right 0.3rem
-            i
-              font-size 0.6rem
-              padding-left pr(65)
-              display block
+          height 8.1rem
+          background-color #fa7298
+          .top
+            width 100%
+            display block
+          .lg-color
+            height 1.4rem
+            color white
+            .right
+              float right
+              padding-top 0.3rem
+              padding-right 0.3rem
+              .theme
+                font-size pr(73)
+              i
+                font-size 0.6rem
+                padding-left pr(65)
+                display block
+                float left
+          .info
+            height pr(250)
+            width 100%
+            .avatar
+              width pr(275)
               float left
-        .info
-          height pr(250)
-          width 100%
-          .avatar
-            width pr(275)
-            float left
-            height 100%
-            position relative
-            .border
-              margin-left pr(28)
-              display block
-              width pr(243)
+              height 100%
+              position relative
+              .border
+                margin-left pr(28)
+                display block
+                width pr(243)
+                float left
+                position absolute
+                z-index 11
+                img
+                  width 100%
+              .item
+                position absolute
+                margin-left pr(70)
+                margin-top pr(48)
+                img
+                  width pr(150)
+                  height pr(150)
+                  border-radius 50%
+                  z-index 10
+            .mid
+              margin-top pr(20)
               float left
-              position absolute
-              z-index 11
-              img
-                width 100%
-            .item
-              position absolute
-              margin-left pr(70)
-              margin-top pr(48)
-              img
-                width pr(150)
-                height pr(150)
-                border-radius 50%
-                z-index 10
-          .mid
-            margin-top pr(20)
-            float left
-            .name
-              margin pr(20) 0
-              color white
-              font-size pr(47)
-              img
-                display inline
-                width pr(65)
-            .vip
-              height pr(48)
-              width pr(175)
-              background-color white
-              color #fa7298
-              line-height pr(48)
-              font-size pr(20)
-              text-align center
-              border-radius pr(8)
-            .coin
-              margin-top pr(25)
+              .name
+                margin pr(20) 0
+                color white
+                font-size pr(47)
+                img
+                  display inline
+                  width pr(65)
+              .vip
+                height pr(48)
+                width pr(175)
+                background-color white
+                color #fa7298
+                line-height pr(48)
+                font-size pr(20)
+                text-align center
+                border-radius pr(8)
+              .coin
+                margin-top pr(25)
+                color white
+                font-size pr(35)
+                .b
+                  margin-right pr(35)
+                span
+                  display block
+                  float left
+            .space
+              float right
               color white
               font-size pr(35)
-              .b
+              margin-right pr(50)
+              margin-top pr(100)
+              i
+                padding-left pr(15)
+                font-size pr(40)
+          .friend
+            width 100%
+            height pr(185)
+            div
+              float left
+              display flex
+              flex-direction column
+              height 100%
+              width 33%
+              color white
+              justify-content center
+              align-items center
+              .num
+                margin-bottom pr(23)
+                font-size pr(43)
+              .text
+                font-size pr(34)
+            .line
+              height pr(60)
+              float left
+              margin-top pr(62)
+              border-left  1px solid white
+
+          .vip-msg
+            height pr(155)
+            background-color rgba(0,0,0,.28)
+            width 1000
+            margin 0 pr(40)
+            border-top-left-radius pr(15)
+            border-top-right-radius  pr(15)
+            padding-left pr(35)
+            color white
+            .left
+              float left
+              .vip
+                margin-top pr(35)
+                display
+                width pr(400)
+                font-size pr(40)
+                margin-bottom pr(20)
+              .date
+                width pr(400)
+                font-size pr(32)
+            i
+              float right
+              display block
+              font-size pr(40)
+              margin-top pr(65)
+              margin-right pr(50)
+
+
+
+        .mid-wrapper
+          overflow auto
+          .blue
+            //overflow hidden
+            margin-top pr(810)
+            height pr(215)
+            display flex
+            justify-content space-around
+            div
+              display flex
+              flex-direction column
+              align-items center
+              justify-content space-evenly
+              .history
+                font-size pr(65)
+              .later
+                font-size pr(110)
+              span
+                font-size pr(80)
+                color #269de1
+              p
+                font-size pr(34)
+                color black
+          .creation-center
+            .creation-top
+              width 100%
+              height pr(115)
+              .left
+                font-size pr(40)
+                float left
+                font-weight bold
+                color black
+                width pr(200)
+                padding-top pr(30)
+                padding-left pr(35)
+              .right
+                float right
+                color white
+                background-color #fa7298
+                font-size pr(40)
+                line-height pr(90)
+                text-align center
+                width pr(240)
+                height pr(90)
+                border-radius pr(45)
+                margin-top pr(12)
                 margin-right pr(35)
+
+
+            .detail
+              width 100%
+              display flex
+              justify-content space-around
+              li
+                height pr(200)
+                display flex
+                flex-direction column
+                align-items center
+                justify-content space-evenly
+                i
+                  color #feb113
+                  font-size pr(75)
+                span
+                  font-size pr(35)
+                  color black
+          .recommend-service
+            margin-top pr(40)
+            .service-top
+              height pr(90)
+              font-size pr(40)
+              padding-left pr(40)
+              padding-top pr(25)
+              float left
+              font-weight bold
+            .service-items
+              width pr(1080)
+              height pr(570)
+              display flex
+              justify-content space-around
+              align-content center
+              flex-wrap wrap
+              div
+                flex 25%
+                display flex
+                width 100%
+                height pr(190)
+                flex-direction column
+                justify-content center
+                align-items center
+                span
+                  display block
+                  font-size pr(75)
+                  padding-bottom pr(30)
+                  color #fa7298
+                .text
+                  font-size pr(35)
+                  color black
+
+
+
+
+          .more-service
+            margin-bottom pr(190)
+            div
+              box-sizing border-box
+              height pr(140)
+              font-size pr(40)
+              font-weight bold
+              padding-left pr(40)
+              padding-top pr(50)
+            li
+              height pr(140)
+              .ic
+                font-size pr(67)
+                color #fa7298
+                padding-top  pr(36)
+                padding-left pr(85)
               span
                 display block
                 float left
-          .space
-            float right
-            color white
-            font-size pr(35)
-            margin-right pr(50)
-            margin-top pr(100)
-            i
-              padding-left pr(15)
-              font-size pr(40)
-        .friend
-          width 100%
-          height pr(185)
-          div
-            float left
-            display flex
-            flex-direction column
-            height 100%
-            width 33%
-            color white
-            justify-content center
-            align-items center
-            .num
-              margin-bottom pr(23)
-              font-size pr(43)
-            .text
-              font-size pr(34)
-          .line
-            height pr(60)
-            float left
-            margin-top pr(62)
-            border-left  1px solid white
+                font-size pr(35)
+                padding-left pr(30)
+                padding-top pr(52)
+              i
+                display block
+                float right
+                font-size pr(35)
+                padding-right pr(50)
+                padding-top pr(52)
 
-        .vip-msg
-          height pr(155)
-          background-color rgba(0,0,0,.28)
-          width 1000
-          margin 0 pr(40)
-          border-top-left-radius pr(15)
-          border-top-right-radius  pr(15)
-          padding-left pr(35)
-          color white
-          .left
-            float left
-            .vip
-              margin-top pr(35)
-              display
-              width pr(400)
-              font-size pr(40)
-              margin-bottom pr(20)
-            .date
-              width pr(400)
-              font-size pr(32)
-          i
-            float right
-            display block
-            font-size pr(40)
-            margin-top pr(65)
-            margin-right pr(50)
+
+
+
+
 
 
 
   #footer-guide
+    background-color: white
     position fixed
     left 0
     bottom 0
@@ -157,18 +304,24 @@ html
     display flex
     flex 1
     justify-content space-around
+    border-top 1px solid #a8a8a8
+    .on
+      color #fa7298
     div
       display flex
       flex-direction column
       justify-content space-around
       align-items center
       color #a8a8a8
-
+      i
+        font-weight bold
       .text
-        font-size pr(42)
-      .cha
-        font-size pr(57)
+        font-size pr(38)
       .icon
-        font-size pr(75)
+        font-size pr(70)
+      .cha
+        font-size pr(60)
+      .bag
+        font-size pr(65)
 
 
