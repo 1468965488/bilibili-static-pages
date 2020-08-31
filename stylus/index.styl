@@ -290,10 +290,13 @@ html
 
 
 
+
       .vshop
         position relative
         .top-nav
+          z-index 1000
           background-color #fa7298
+          position fixed
           >img
            width 100%
           .my-vshop
@@ -317,11 +320,9 @@ html
                 font-size pr(55)
                 margin-top pr(58)
                 margin-left pr(60)
-
-
-
         .category
           width 100%
+          padding-top pr(250)
           position relative
           .search
             color #9a9a9a
@@ -361,7 +362,6 @@ html
               div
                 width pr(120)
                 height pr(120)
-                //background-color #bfa
                 margin-bottom pr(10)
                 border-radius 50%
                 background url("../images/vshop/bacmground.png") no-repeat
@@ -382,12 +382,8 @@ html
                 background-position pr(-612) pr(-218)
               .eight
                 background-position pr(-879) pr(-218)
-
               span
                 font-size pr(35)
-
-
-
         .recommend
           width pr(1000)
           height pr(420)
@@ -479,11 +475,80 @@ html
                 display block
                 float left
                 font-size pr(35)
+                color #999
               .talk
                 color #a8a8a8
 
 
 
+
+        .banner
+          margin-top pr(450)
+          img
+            display block
+            width 100%
+            height auto
+
+        .list
+          width pr(1010)
+          margin-left pr(30)
+          .top
+            width 100%
+            height pr(120)
+            .active
+              font-size pr(40)
+              font-weight bold
+              position relative
+              //background-color #fa7298
+              &::after
+                position absolute
+                border-radius pr(5)
+                z-index -1
+                top pr(70)
+                left pr(0)
+                width pr(70)
+                height pr(10)
+                background-color #fa7298
+                display block
+                content ''
+            div
+              float left
+              z-index 100
+              font-size pr(35)
+              line-height pr(120)
+              margin-right pr(120)
+
+          .masonry
+            column-count 2
+            column-gap pr(30)
+            margin-bottom pr(190)
+            .item
+              position relative
+              counter-increment item-counter
+              img
+                display block
+                width 100%
+                height auto
+                margin-bottom pr(20)
+              .title
+                background-color white
+                height pr(150)
+                width 100%
+                font-size pr(40)
+                span
+                  line-height pr(60)
+                h3
+                  float left
+                  margin-top pr(10)
+                  margin-right pr(40)
+                  border solid rgba(0,0,0,.18) pr(2)
+                  font-size pr(35)
+                  color #999999
+                  height pr(40)
+                  line-height pr(40)
+                  text-align center
+                  padding 0 pr(25)
+                  border-radius pr(20)
 
   #footer-guide
     background-color: white

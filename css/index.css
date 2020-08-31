@@ -4,49 +4,57 @@ html {
 #app {
   width: 100%;
   height: 100%;
-  background: #f5f5f5;
   position: relative;
   font-family: PingFangSC-Regular;
 }
-#app .content {
-  display: fixed;
+#app .content >div {
+  display: none;
 }
-#app .content .profile #top-nav {
-  position: relative;
+#app .content >div.on {
+  display: block;
+}
+#app .content >div .profile #top-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 8.1rem;
   background-color: #fa7298;
 }
-#app .content .profile #top-nav .top {
+#app .content >div .profile #top-nav .top {
   width: 100%;
   display: block;
 }
-#app .content .profile #top-nav .lg-color {
+#app .content >div .profile #top-nav .lg-color {
   height: 1.4rem;
   color: #fff;
 }
-#app .content .profile #top-nav .lg-color .right {
+#app .content >div .profile #top-nav .lg-color .right {
   float: right;
   padding-top: 0.3rem;
   padding-right: 0.3rem;
 }
-#app .content .profile #top-nav .lg-color .right i {
+#app .content >div .profile #top-nav .lg-color .right .theme {
+  font-size: 0.73rem;
+}
+#app .content >div .profile #top-nav .lg-color .right i {
   font-size: 0.6rem;
   padding-left: 0.65rem;
   display: block;
   float: left;
 }
-#app .content .profile #top-nav .info {
+#app .content >div .profile #top-nav .info {
   height: 2.5rem;
   width: 100%;
 }
-#app .content .profile #top-nav .info .avatar {
+#app .content >div .profile #top-nav .info .avatar {
   width: 2.75rem;
   float: left;
   height: 100%;
   position: relative;
 }
-#app .content .profile #top-nav .info .avatar .border {
+#app .content >div .profile #top-nav .info .avatar .border {
   margin-left: 0.28rem;
   display: block;
   width: 2.43rem;
@@ -54,34 +62,34 @@ html {
   position: absolute;
   z-index: 11;
 }
-#app .content .profile #top-nav .info .avatar .border img {
+#app .content >div .profile #top-nav .info .avatar .border img {
   width: 100%;
 }
-#app .content .profile #top-nav .info .avatar .item {
+#app .content >div .profile #top-nav .info .avatar .item {
   position: absolute;
   margin-left: 0.7rem;
   margin-top: 0.48rem;
 }
-#app .content .profile #top-nav .info .avatar .item img {
+#app .content >div .profile #top-nav .info .avatar .item img {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   z-index: 10;
 }
-#app .content .profile #top-nav .info .mid {
+#app .content >div .profile #top-nav .info .mid {
   margin-top: 0.2rem;
   float: left;
 }
-#app .content .profile #top-nav .info .mid .name {
+#app .content >div .profile #top-nav .info .mid .name {
   margin: 0.2rem 0;
   color: #fff;
   font-size: 0.47rem;
 }
-#app .content .profile #top-nav .info .mid .name img {
+#app .content >div .profile #top-nav .info .mid .name img {
   display: inline;
   width: 0.65rem;
 }
-#app .content .profile #top-nav .info .mid .vip {
+#app .content >div .profile #top-nav .info .mid .vip {
   height: 0.48rem;
   width: 1.75rem;
   background-color: #fff;
@@ -91,34 +99,34 @@ html {
   text-align: center;
   border-radius: 0.08rem;
 }
-#app .content .profile #top-nav .info .mid .coin {
+#app .content >div .profile #top-nav .info .mid .coin {
   margin-top: 0.25rem;
   color: #fff;
   font-size: 0.35rem;
 }
-#app .content .profile #top-nav .info .mid .coin .b {
+#app .content >div .profile #top-nav .info .mid .coin .b {
   margin-right: 0.35rem;
 }
-#app .content .profile #top-nav .info .mid .coin span {
+#app .content >div .profile #top-nav .info .mid .coin span {
   display: block;
   float: left;
 }
-#app .content .profile #top-nav .info .space {
+#app .content >div .profile #top-nav .info .space {
   float: right;
   color: #fff;
   font-size: 0.35rem;
   margin-right: 0.5rem;
   margin-top: 1rem;
 }
-#app .content .profile #top-nav .info .space i {
+#app .content >div .profile #top-nav .info .space i {
   padding-left: 0.15rem;
   font-size: 0.4rem;
 }
-#app .content .profile #top-nav .friend {
+#app .content >div .profile #top-nav .friend {
   width: 100%;
   height: 1.85rem;
 }
-#app .content .profile #top-nav .friend div {
+#app .content >div .profile #top-nav .friend div {
   float: left;
   display: flex;
   flex-direction: column;
@@ -128,20 +136,20 @@ html {
   justify-content: center;
   align-items: center;
 }
-#app .content .profile #top-nav .friend div .num {
+#app .content >div .profile #top-nav .friend div .num {
   margin-bottom: 0.23rem;
   font-size: 0.43rem;
 }
-#app .content .profile #top-nav .friend div .text {
+#app .content >div .profile #top-nav .friend div .text {
   font-size: 0.34rem;
 }
-#app .content .profile #top-nav .friend .line {
+#app .content >div .profile #top-nav .friend .line {
   height: 0.6rem;
   float: left;
   margin-top: 0.62rem;
   border-left: 1px solid #fff;
 }
-#app .content .profile #top-nav .vip-msg {
+#app .content >div .profile #top-nav .vip-msg {
   height: 1.55rem;
   background-color: rgba(0,0,0,0.28);
   width: 1000;
@@ -151,28 +159,477 @@ html {
   padding-left: 0.35rem;
   color: #fff;
 }
-#app .content .profile #top-nav .vip-msg .left {
+#app .content >div .profile #top-nav .vip-msg .left {
   float: left;
 }
-#app .content .profile #top-nav .vip-msg .left .vip {
+#app .content >div .profile #top-nav .vip-msg .left .vip {
   margin-top: 0.35rem;
 display
   width: 4rem;
   font-size: 0.4rem;
   margin-bottom: 0.2rem;
 }
-#app .content .profile #top-nav .vip-msg .left .date {
+#app .content >div .profile #top-nav .vip-msg .left .date {
   width: 4rem;
   font-size: 0.32rem;
 }
-#app .content .profile #top-nav .vip-msg i {
+#app .content >div .profile #top-nav .vip-msg i {
   float: right;
   display: block;
   font-size: 0.4rem;
   margin-top: 0.65rem;
   margin-right: 0.5rem;
 }
+#app .content >div .profile .mid-wrapper {
+  overflow: auto;
+}
+#app .content >div .profile .mid-wrapper .blue {
+  margin-top: 8.1rem;
+  height: 2.15rem;
+  display: flex;
+  justify-content: space-around;
+}
+#app .content >div .profile .mid-wrapper .blue div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#app .content >div .profile .mid-wrapper .blue div .history {
+  font-size: 0.65rem;
+}
+#app .content >div .profile .mid-wrapper .blue div .later {
+  font-size: 1.1rem;
+}
+#app .content >div .profile .mid-wrapper .blue div span {
+  font-size: 0.8rem;
+  color: #269de1;
+}
+#app .content >div .profile .mid-wrapper .blue div p {
+  font-size: 0.34rem;
+  color: #000;
+}
+#app .content >div .profile .mid-wrapper .creation-center .creation-top {
+  width: 100%;
+  height: 1.15rem;
+}
+#app .content >div .profile .mid-wrapper .creation-center .creation-top .left {
+  font-size: 0.4rem;
+  float: left;
+  font-weight: bold;
+  color: #000;
+  width: 2rem;
+  padding-top: 0.3rem;
+  padding-left: 0.35rem;
+}
+#app .content >div .profile .mid-wrapper .creation-center .creation-top .right {
+  float: right;
+  color: #fff;
+  background-color: #fa7298;
+  font-size: 0.4rem;
+  line-height: 0.9rem;
+  text-align: center;
+  width: 2.4rem;
+  height: 0.9rem;
+  border-radius: 0.45rem;
+  margin-top: 0.12rem;
+  margin-right: 0.35rem;
+}
+#app .content >div .profile .mid-wrapper .creation-center .detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#app .content >div .profile .mid-wrapper .creation-center .detail li {
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#app .content >div .profile .mid-wrapper .creation-center .detail li i {
+  color: #feb113;
+  font-size: 0.75rem;
+}
+#app .content >div .profile .mid-wrapper .creation-center .detail li span {
+  font-size: 0.35rem;
+  color: #000;
+}
+#app .content >div .profile .mid-wrapper .recommend-service {
+  margin-top: 0.4rem;
+}
+#app .content >div .profile .mid-wrapper .recommend-service .service-top {
+  height: 0.9rem;
+  font-size: 0.4rem;
+  padding-left: 0.4rem;
+  padding-top: 0.25rem;
+  float: left;
+  font-weight: bold;
+}
+#app .content >div .profile .mid-wrapper .recommend-service .service-items {
+  width: 10.8rem;
+  height: 5.7rem;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: wrap;
+}
+#app .content >div .profile .mid-wrapper .recommend-service .service-items div {
+  flex: 25%;
+  display: flex;
+  width: 100%;
+  height: 1.9rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#app .content >div .profile .mid-wrapper .recommend-service .service-items div span {
+  display: block;
+  font-size: 0.75rem;
+  padding-bottom: 0.3rem;
+  color: #fa7298;
+}
+#app .content >div .profile .mid-wrapper .recommend-service .service-items div .text {
+  font-size: 0.35rem;
+  color: #000;
+}
+#app .content >div .profile .mid-wrapper .more-service {
+  margin-bottom: 1.9rem;
+}
+#app .content >div .profile .mid-wrapper .more-service div {
+  box-sizing: border-box;
+  height: 1.4rem;
+  font-size: 0.4rem;
+  font-weight: bold;
+  padding-left: 0.4rem;
+  padding-top: 0.5rem;
+}
+#app .content >div .profile .mid-wrapper .more-service li {
+  height: 1.4rem;
+}
+#app .content >div .profile .mid-wrapper .more-service li .ic {
+  font-size: 0.67rem;
+  color: #fa7298;
+  padding-top: 0.36rem;
+  padding-left: 0.85rem;
+}
+#app .content >div .profile .mid-wrapper .more-service li span {
+  display: block;
+  float: left;
+  font-size: 0.35rem;
+  padding-left: 0.3rem;
+  padding-top: 0.52rem;
+}
+#app .content >div .profile .mid-wrapper .more-service li i {
+  display: block;
+  float: right;
+  font-size: 0.35rem;
+  padding-right: 0.5rem;
+  padding-top: 0.52rem;
+}
+#app .content >div .vshop {
+  position: relative;
+}
+#app .content >div .vshop .top-nav {
+  z-index: 1000;
+  background-color: #fa7298;
+  position: fixed;
+}
+#app .content >div .vshop .top-nav >img {
+  width: 100%;
+}
+#app .content >div .vshop .top-nav .my-vshop {
+  width: 100%;
+  height: 1.7rem;
+  position: relative;
+  color: #fff;
+}
+#app .content >div .vshop .top-nav .my-vshop p {
+  position: absolute;
+  float: left;
+  font-size: 0.55rem;
+  left: 50%;
+  top: 0.58rem;
+  transform: translateX(-50%);
+}
+#app .content >div .vshop .top-nav .my-vshop .right {
+  float: right;
+  margin-right: 0.5rem;
+}
+#app .content >div .vshop .top-nav .my-vshop .right i {
+  display: block;
+  float: left;
+  font-size: 0.55rem;
+  margin-top: 0.58rem;
+  margin-left: 0.6rem;
+}
+#app .content >div .vshop .category {
+  width: 100%;
+  padding-top: 2.5rem;
+  position: relative;
+}
+#app .content >div .vshop .category .search {
+  color: #9a9a9a;
+  background-color: #f3f4f6;
+  position: absolute;
+  left: 50%;
+  font-size: 0.4rem;
+  width: 10rem;
+  height: 1rem;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 1rem;
+}
+#app .content >div .vshop .category .search >span {
+  display: block;
+  float: right;
+  font-size: 0.4rem;
+  margin-right: 0.6rem;
+}
+#app .content >div .vshop .category .search >i {
+  margin-right: 0.6rem;
+}
+#app .content >div .vshop .category .items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-evenly;
+  height: 4.3rem;
+  padding-top: 1rem;
+  background-color: #fff;
+}
+#app .content >div .vshop .category .items >li {
+  flex: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#app .content >div .vshop .category .items >li div {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-bottom: 0.1rem;
+  border-radius: 50%;
+  background: url("../images/vshop/bacmground.png") no-repeat;
+  background-size: 10.8rem;
+}
+#app .content >div .vshop .category .items >li .one {
+  background-position: -0.79rem -0.25rem;
+}
+#app .content >div .vshop .category .items >li .two {
+  background-position: -3.44rem -0.25rem;
+}
+#app .content >div .vshop .category .items >li .three {
+  background-position: -6.12rem -0.25rem;
+}
+#app .content >div .vshop .category .items >li .four {
+  background-position: -8.79rem -0.25rem;
+}
+#app .content >div .vshop .category .items >li .five {
+  background-position: -0.79rem -2.18rem;
+}
+#app .content >div .vshop .category .items >li .six {
+  background-position: -3.44rem -2.18rem;
+}
+#app .content >div .vshop .category .items >li .seven {
+  background-position: -6.12rem -2.18rem;
+}
+#app .content >div .vshop .category .items >li .eight {
+  background-position: -8.79rem -2.18rem;
+}
+#app .content >div .vshop .category .items >li span {
+  font-size: 0.35rem;
+}
+#app .content >div .vshop .recommend {
+  width: 10rem;
+  height: 4.2rem;
+  box-shadow: 0 0 0.15rem rgba(0,0,0,0.1);
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+#app .content >div .vshop .recommend .up {
+  display: flex;
+  width: 10rem;
+  height: 3.25rem;
+  font-size: 0.4rem;
+}
+#app .content >div .vshop .recommend .up .left {
+  flex: 2;
+  box-sizing: border-box;
+  border-bottom: rgba(0,0,0,0.1) solid 0.02rem;
+}
+#app .content >div .vshop .recommend .up .left span {
+  box-sizing: border-box;
+  display: block;
+  width: 5rem;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-weight: bold;
+  padding-left: 0.25rem;
+}
+#app .content >div .vshop .recommend .up .left span p {
+  float: right;
+  color: #800080;
+  background-color: #efecff;
+  width: 2.2rem;
+  height: 0.4rem;
+  font-size: 0.35rem;
+  text-align: center;
+  line-height: 0.4rem;
+  margin-top: 0.25rem;
+  margin-right: 0.25rem;
+}
+#app .content >div .vshop .recommend .up .left div {
+  padding-left: 0.25rem;
+  overflow: hidden;
+}
+#app .content >div .vshop .recommend .up .left div img {
+  border-radius: 0.15rem;
+  width: 4.5rem;
+  display: block;
+}
+#app .content >div .vshop .recommend .up .right {
+  flex: 1;
+  border-left: rgba(0,0,0,0.1) solid 0.02rem;
+  border-bottom: rgba(0,0,0,0.1) solid 0.02rem;
+}
+#app .content >div .vshop .recommend .up .right span {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-weight: bold;
+  padding-left: 0.25rem;
+}
+#app .content >div .vshop .recommend .up .right div {
+  padding-left: 0.25rem;
+  overflow: hidden;
+}
+#app .content >div .vshop .recommend .up .right div img {
+  border-radius: 0.15rem;
+  width: 2rem;
+  display: block;
+}
+#app .content >div .vshop .recommend .down {
+  top: 3.25rem;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 0.95rem;
+  font-size: 0.4rem;
+  line-height: 0.95rem;
+}
+#app .content >div .vshop .recommend .down .left {
+  border-right: rgba(0,0,0,0.1) solid 0.02rem;
+}
+#app .content >div .vshop .recommend .down >span {
+  flex: 1;
+  padding-left: 0.3rem;
+}
+#app .content >div .vshop .recommend .down >span i {
+  display: block;
+  float: left;
+  font-size: 0.52rem;
+  color: #ffca24;
+}
+#app .content >div .vshop .recommend .down >span p {
+  float: left;
+  font-size: 0.4rem;
+  margin: 0 0.2rem;
+}
+#app .content >div .vshop .recommend .down >span span {
+  display: block;
+  float: left;
+  font-size: 0.35rem;
+  color: #999;
+}
+#app .content >div .vshop .recommend .down >span .talk {
+  color: #a8a8a8;
+}
+#app .content >div .vshop .banner {
+  margin-top: 4.5rem;
+}
+#app .content >div .vshop .banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#app .content >div .vshop .list {
+  width: 10.1rem;
+  margin-left: 0.3rem;
+}
+#app .content >div .vshop .list .top {
+  width: 100%;
+  height: 1.2rem;
+}
+#app .content >div .vshop .list .top .active {
+  font-size: 0.4rem;
+  font-weight: bold;
+  position: relative;
+}
+#app .content >div .vshop .list .top .active::after {
+  position: absolute;
+  border-radius: 0.05rem;
+  z-index: -1;
+  top: 0.7rem;
+  left: 0rem;
+  width: 0.7rem;
+  height: 0.1rem;
+  background-color: #fa7298;
+  display: block;
+  content: '';
+}
+#app .content >div .vshop .list .top div {
+  float: left;
+  z-index: 100;
+  font-size: 0.35rem;
+  line-height: 1.2rem;
+  margin-right: 1.2rem;
+}
+#app .content >div .vshop .list .masonry {
+  column-count: 2;
+  column-gap: 0.3rem;
+  margin-bottom: 1.9rem;
+}
+#app .content >div .vshop .list .masonry .item {
+  position: relative;
+  counter-increment: item-counter;
+}
+#app .content >div .vshop .list .masonry .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.2rem;
+}
+#app .content >div .vshop .list .masonry .item .title {
+  background-color: #fff;
+  height: 1.5rem;
+  width: 100%;
+  font-size: 0.4rem;
+}
+#app .content >div .vshop .list .masonry .item .title span {
+  line-height: 0.6rem;
+}
+#app .content >div .vshop .list .masonry .item .title h3 {
+  float: left;
+  margin-top: 0.1rem;
+  margin-right: 0.4rem;
+  border: solid rgba(0,0,0,0.18) 0.02rem;
+  font-size: 0.35rem;
+  color: #999;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+  padding: 0 0.25rem;
+  border-radius: 0.2rem;
+}
 #app #footer-guide {
+  background-color: #fff;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -182,6 +639,10 @@ display
   display: flex;
   flex: 1;
   justify-content: space-around;
+  border-top: 1px solid #a8a8a8;
+}
+#app #footer-guide .on {
+  color: #fa7298;
 }
 #app #footer-guide div {
   display: flex;
@@ -190,12 +651,18 @@ display
   align-items: center;
   color: #a8a8a8;
 }
-#app #footer-guide div .text {
-  font-size: 0.42rem;
+#app #footer-guide div i {
+  font-weight: bold;
 }
-#app #footer-guide div .cha {
-  font-size: 0.57rem;
+#app #footer-guide div .text {
+  font-size: 0.38rem;
 }
 #app #footer-guide div .icon {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+}
+#app #footer-guide div .cha {
+  font-size: 0.6rem;
+}
+#app #footer-guide div .bag {
+  font-size: 0.65rem;
 }
